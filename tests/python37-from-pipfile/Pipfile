@@ -1,0 +1,9 @@
+[[source]]
+name = "example"
+url = "https://pypi.org/example"
+
+[packages]
+pyyaml = "*"
+
+[requires]
+python_version = "3.7"

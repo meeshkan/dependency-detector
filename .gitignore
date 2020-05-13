@@ -1,0 +1,16 @@
+node_modules
+.venv
+venv/
+.vscode
+*.pyc
+.python-version
+.vscode/
+.pytest_cache/
+.mypy_cache/
+__pycache__/
+.ipynb_checkpoints/
+.testmondata
+*.egg-info/
+dist/
+build/
+.idea/
