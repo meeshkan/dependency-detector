@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 
+import os
 import sys
-from typing import Set
+from typing import List
 
 from detector.dependency import Dependency
 from detector.detect_java import detect_java
 from detector.detect_python import detect_python
 
 
-def detect_dependencies(directory_path: str) -> Set[Dependency]:
+def detect_dependencies(directory_path: str) -> List[Dependency]:
     detect_methods = [detect_java, detect_python]
 
-    result = set()
+    result = []
     for detect_method in detect_methods:
-        result.update(detect_method(directory_path))
+        result.extend(detect_method(directory_path))
     return result
 
 
@@ -23,5 +24,14 @@ def cli():
         sys.exit(1)
 
     directory = sys.argv[1]
+    if not os.path.isdir(directory):
+        sys.exit(f"Not a directory: {directory}")
+
     packages_to_install = detect_dependencies(directory)
-    print(str(packages_to_install))
+
+    result = ""
+    for package in packages_to_install:
+        if result:
+            result += "; "
+        result += package.value.install_command()
+    print(result)

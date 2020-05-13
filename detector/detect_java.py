@@ -9,7 +9,6 @@ def detect_java(directory_path: str) -> List[Dependency]:
     result: List[Dependency] = []
     possibly_pom_xml = f"{directory_path}/pom.xml"
     if path.exists(possibly_pom_xml):
-        result.append(Dependency.MAVEN)
         dom = parse(possibly_pom_xml)
         properties_list = dom.getElementsByTagName("properties")
         if len(properties_list) > 0:
@@ -21,4 +20,5 @@ def detect_java(directory_path: str) -> List[Dependency]:
                             result.append(Dependency.JAVA8)
                         elif java_version == "11":
                             result.append(Dependency.JAVA11)
+        result.append(Dependency.MAVEN)
     return result

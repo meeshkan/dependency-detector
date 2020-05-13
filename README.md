@@ -6,3 +6,4 @@ Tool to analyse a project for packages necessary to build it.
 1. Install dependencies: `pip install --upgrade -e '.[dev]'`
 1. Install [pyright](https://github.com/microsoft/pyright).
 1. Run `python setup.py test` to test.
+1. Run `pip install dependency-detector` to install the command-line tool
