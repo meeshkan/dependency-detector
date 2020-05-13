@@ -12,6 +12,7 @@ Specify a directory containing a project. This will output the commands necessar
 ```sh
 $ dependency-detector tests/python37-from-pipfile 
 add-apt-repository ppa:deadsnakes/ppa; apt update; apt install python3.7
+
 $ dependency-detector tests/java8-and-maven      
 apt install openjdk-8-jdk-headless; apt install maven
 ```
