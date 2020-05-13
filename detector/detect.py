@@ -6,12 +6,13 @@ from typing import List
 
 from detector.dependency import Dependency
 from detector.detect_java import detect_java
+from detector.detect_nodejs import detect_nodejs
 from detector.detect_python import detect_python
+
+detect_methods = [detect_java, detect_python, detect_nodejs]
 
 
 def detect_dependencies(directory_path: str) -> List[Dependency]:
-    detect_methods = [detect_java, detect_python]
-
     result = []
     for detect_method in detect_methods:
         result.extend(detect_method(directory_path))

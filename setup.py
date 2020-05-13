@@ -5,6 +5,8 @@ from shutil import rmtree
 
 from setuptools import Command, find_packages, setup
 
+VERSION = "0.4.0"
+
 here = os.path.abspath(os.path.dirname(__file__))
 
 with open(os.path.join(here, "README.md"), encoding="utf-8") as f:
@@ -25,7 +27,6 @@ DEV = [
     "wheel",
 ]
 
-VERSION = "0.3.0"
 
 # Optional packages
 EXTRAS = {"dev": DEV}

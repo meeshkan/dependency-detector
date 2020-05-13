@@ -2,7 +2,6 @@ from os import path
 from typing import List
 
 import toml
-
 from detector.dependency import Dependency
 
 

@@ -22,6 +22,7 @@ class Dependency(Enum):
     JAVA11 = AptInstallablePackage("openjdk-11-jdk-headless")
     JAVA8 = AptInstallablePackage("openjdk-8-jdk-headless")
     MAVEN = AptInstallablePackage(name="maven")
+    NODEJS = AptInstallablePackage(name="npm")
     PYTHON36 = AptInstallablePackage(
         name="python3.6", apt_repository="ppa:deadsnakes/ppa"
     )

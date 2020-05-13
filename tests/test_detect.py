@@ -7,5 +7,9 @@ def test_java8_and_maven():
     )
 
 
-def python37_from_pipfile():
+def test_python37_from_pipfile():
     assert [Dependency.PYTHON37] == detect_dependencies("tests/python37-from-pipfile")
+
+
+def test_package_json():
+    assert [Dependency.NODEJS] == detect_dependencies("tests/package-json")
