@@ -1,4 +1,5 @@
 ![Python](https://github.com/meeshkan/dependency-detector/workflows/Python/badge.svg)
+[![PyPI version](https://badge.fury.io/py/dependency-detector.svg)](https://badge.fury.io/py/dependency-detector)
 [![License](https://img.shields.io/pypi/l/http-types)](LICENSE)
 
 # dependency-detector
