@@ -31,7 +31,7 @@ def cli():
 
     result = ""
     for package in packages_to_install:
-        if result:
+        if result != "":
             result += "; "
         result += package.value.install_command()
     print(result)

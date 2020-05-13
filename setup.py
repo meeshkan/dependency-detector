@@ -25,7 +25,7 @@ DEV = [
     "wheel",
 ]
 
-VERSION = "0.2.0"
+VERSION = "0.3.0"
 
 # Optional packages
 EXTRAS = {"dev": DEV}
@@ -164,7 +164,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     zip_safe=False,
-    entry_points={"console_scripts": ["detector = detector.detect:cli"]},
+    entry_points={"console_scripts": ["dependency-detector = detector.detect:cli"]},
     cmdclass={
         "dist": BuildDistCommand,
         "test": TestCommand,
