@@ -1,3 +1,6 @@
+![Python](https://github.com/meeshkan/dependency-detector/workflows/Python/badge.svg)
+[![License](https://img.shields.io/pypi/l/http-types)](LICENSE)
+
 # dependency-detector
 Tool to analyse a project for packages necessary to build it.
 
