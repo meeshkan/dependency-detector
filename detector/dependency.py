@@ -13,8 +13,8 @@ class AptInstallablePackage:
     def install_command(self) -> str:
         result = ""
         if self.apt_repository:
-            result += f"add-apt-repository {self.apt_repository}; apt update; "
-        result += f"apt install {self.name}"
+            result += f"add-apt-repository {self.apt_repository}; apt-get -q update; "
+        result += f"apt-get -q -y install {self.name}"
         return result
 
 
