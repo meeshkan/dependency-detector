@@ -27,3 +27,8 @@ apt install openjdk-8-jdk-headless; apt install maven
 1. Install [pyright](https://github.com/microsoft/pyright).
 1. Run `python setup.py test` to test.
 1. Run `pip install dependency-detector` to install the command-line tool
+
+# Publishing
+1. Bump the version in [setup.py](./setup.py). Commit and push.
+1. Run `python setup.py test` and `python setup.py dist` to check that everything works.
+1. To build and upload the package, run `python setup.py upload`. Insert PyPI credentials to upload the package to `PyPI`. The command will also run `git tag` to tag the commit as a release and push the tags to remote.

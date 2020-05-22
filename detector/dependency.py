@@ -19,6 +19,8 @@ class AptInstallablePackage:
 
 
 class Dependency(Enum):
+    DOCKER = AptInstallablePackage("docker.io")
+    DOCKER_COMPOSE = AptInstallablePackage("docker-compose")
     JAVA11 = AptInstallablePackage("openjdk-11-jdk-headless")
     JAVA8 = AptInstallablePackage("openjdk-8-jdk-headless")
     MAVEN = AptInstallablePackage(name="maven")

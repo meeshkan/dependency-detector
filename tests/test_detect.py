@@ -1,9 +1,21 @@
 from detector.detect import Dependency, detect_dependencies
 
 
+def test_docker_and_docker_compose():
+    assert [Dependency.DOCKER, Dependency.DOCKER_COMPOSE] == detect_dependencies(
+        "tests/docker-and-docker-compose"
+    )
+
+
 def test_java8_and_maven():
     assert [Dependency.JAVA8, Dependency.MAVEN] == detect_dependencies(
         "tests/java8-and-maven"
+    )
+
+
+def test_java11_from_pom():
+    assert [Dependency.JAVA11, Dependency.MAVEN] == detect_dependencies(
+        "tests/java11-from-pom"
     )
 
 

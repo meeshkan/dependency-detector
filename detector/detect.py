@@ -5,11 +5,12 @@ import sys
 from typing import List
 
 from detector.dependency import Dependency
+from detector.detect_docker import detect_docker
 from detector.detect_java import detect_java
 from detector.detect_nodejs import detect_nodejs
 from detector.detect_python import detect_python
 
-detect_methods = [detect_java, detect_python, detect_nodejs]
+detect_methods = [detect_docker, detect_java, detect_python, detect_nodejs]
 
 
 def detect_dependencies(directory_path: str) -> List[Dependency]:

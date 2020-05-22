@@ -5,7 +5,7 @@ from shutil import rmtree
 
 from setuptools import Command, find_packages, setup
 
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 
 here = os.path.abspath(os.path.dirname(__file__))
 
@@ -153,7 +153,7 @@ setup(
     url="https://github.com/meeshkan/dependency-detector",
     author="Meeshkan Dev Team",
     author_email="dev@meeshkan.com",
-    python_requires=">=3.7.0",
+    python_requires=">=3.8.0",
     license="MIT",
     packages=find_packages(exclude=["tests"]),
     include_package_data=True,
