@@ -14,11 +14,11 @@ pip install dependency-detector
 Specify a directory containing a project. This will output the commands necessary to install build dependencies on a Ubuntu 20.04 environment:
 
 ```sh
-$ dependency-detector tests/python37-from-pipfile 
-add-apt-repository ppa:deadsnakes/ppa; apt update; apt install python3.7
+$ dependency-detector tests/python37-from-pipfile
+apt-get -q -y install software-properties-common; add-apt-repository ppa:deadsnakes/ppa; apt-get -q update; apt-get -q -y install python3.7
 
-$ dependency-detector tests/java8-and-maven      
-apt install openjdk-8-jdk-headless; apt install maven
+$ dependency-detector tests/java8-and-maven
+apt-get -q -y install openjdk-8-jdk-headless; apt-get -q -y install maven
 ```
 
 # Development
