@@ -32,6 +32,11 @@ def cli():
     packages_to_install = detect_dependencies(directory)
 
     result = ""
+
+    if any(pkg.value.apt_repository is not None for pkg in packages_to_install):
+        # software-properties-common contains the add-apt-repository script:
+        result += 'apt-get -q -y install software-properties-common'
+
     for package in packages_to_install:
         if result != "":
             result += "; "
