@@ -1,4 +1,4 @@
-![Python](https://github.com/meeshkan/dependency-detector/workflows/Python/badge.svg)
+[![Python](https://github.com/meeshkan/dependency-detector/workflows/Python/badge.svg)](https://github.com/meeshkan/dependency-detector/actions?query=workflow%3APython)
 [![PyPI version](https://badge.fury.io/py/dependency-detector.svg)](https://badge.fury.io/py/dependency-detector)
 [![License](https://img.shields.io/pypi/l/http-types)](LICENSE)
 
